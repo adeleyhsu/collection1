@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="HomeworkTime.css">
+     <link rel="icon" type="image/x-icon" href="images/tomato.png">
+    <title>5</title>
+</head>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            /* Desktop background */
+            background-image: url('images/photoswebsite6.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Mobile - swap to different background */
+        @media (max-width: 768px) {
+            body {
+                background-image: url('images/snell.jpg');
+            }
+        }
+    </style>
+
+<div blurbs>
+<style>
+/* Each dot group */
+.poop-container {
+  position: absolute;
+  display: inline-block;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.poop-dot {
+  width: 11px;
+  height: 11px;
+  background-color: #e32a1c;
+  border: 1.5px solid black;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  box-shadow: 3px 5px 6px rgba(0,0,0,15);
+}
+
+.poop-text {
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 120%;
+  left: 150%;
+  background: rgba(243, 235, 202, 0.828);
+  color: #000000;
+  padding: 10px;
+  border-radius: 8px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 6px 8px 10px rgba(0,0,0,0.4);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease, visibility 0.5s ease; 
+
+/* fade duration */
+}
+
+/* Hover to show */
+.poop-container:hover .poop-text {
+  opacity: 1;
+  visibility: visible;
+}
+
+</style>
+</div>
+
+<div class="area">
+
+  <div class="poop-container" style="top: 285px; left: 585px;">
+    <input type="checkbox" id="dot2">
+    <label for="dot2" class="poop-dot"></label>
+    <div class="poop-text">You aren't exactly sure how to approach this one yet.</div>
+  </div>
+
+   <div class="poop-container" style="top: 390px; left: 390px;">
+    <input type="checkbox" id="dot4">
+    <label for="dot4" class="poop-dot"></label>
+    <div class="poop-text">You found this one sitting at the bottom of your backpack since probably forever. It feels like the more you use it, the dryer your lips get.</div>
+  </div>
+  
+  <div class="poop-container" style="top: 170px; left: 1130px;">
+    <input type="checkbox" id="dot5">
+    <label for="dot5" class="poop-dot"></label>
+    <div class="poop-text">Purchased from the school caf for five whole dollars. #steal!!</div>
+  </div>
+
+    <div class="poop-container" style="top: 180px; left: 530px;">
+    <input type="checkbox" id="dot1">
+    <label for="dot1" class="poop-dot"></label>
+    <div class="poop-text">It feels like you’ve been staring at this computer for ages. (It’s been 30 minutes)</div>
+  </div>
+
+<div class="poop-container" style="top: 560px; left: 700px;">
+    <input type="checkbox" id="dot6">
+    <label for="dot6" class="poop-dot"></label>
+    <div class="poop-text">Gotta tap into your wokeness for this one.</div>
+  </div>
+
+  <div class="poop-container" style="top: 600px; left: 450px;">
+    <input type="checkbox" id="dot7">
+    <label for="dot7" class="poop-dot"></label>
+    <div class="poop-text">Despite your hands being extremely cold this surface always manages to mirror your palms with condensation.</div>
+  </div>
+
+    <div class="poop-container" style="top: 200px; left: 300px;">
+    <input type="checkbox" id="dot8">
+    <label for="dot8" class="poop-dot"></label>
+    <div class="poop-text">Not a Telfar nor a Goyard. Just your trusty Jansport.</div>
+  </div>
+
+</div>
+
+<script>
+const container = document.querySelector('.poop-container');
+const textBox = container.querySelector('.poop-text');
+const dot = container.querySelector('.poop-dot');
+
+dot.addEventListener('click', () => {
+  textBox.style.opacity = '1';
+  textBox.style.visibility = 'visible';
+});
+
+container.addEventListener('mouseleave', () => {
+  textBox.style.opacity = '0';
+  textBox.style.visibility = 'hidden';
+});
+</script>
+
+<div widgets>
+<div class="onward">
+  <a href="BadHairDay.html"><img src="images/onward.png" alt="onward" style="width: 230px; height: 200px;"></a>
+</div>
+
+<div class="goback">
+  <a href="supportlocalbusinesses.html"><img src="images/goback.png" alt="goback" style="width: 230px; height: 200px;"></a>
+</div>
+
+<div class="menu">
+  <a href="menu.html"><img src="images/menupage.png" alt="menu" style="width: 130px; height: 100px;"></a>
+</div>
+</div>
+
+<div starterbox>
+  <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+
+        .overlay.fade-out {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .welcome-box {
+            background: rgba(243, 235, 202);
+            padding: 40px 50px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 500px;
+            border: 2.5px solid black;
+            border-radius: 10px;
+        }
+
+        .welcome-box h2 {
+            color: #000000;
+            font-size: 2;
+            margin-bottom: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 1;
+        }
+
+        .welcome-box p {
+            color: #000000;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .go-button {
+            color: rgb(0, 0, 0);
+            border: none;
+            padding: 15px 50px;
+            font-size: 1.2em;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            font-family: Arial, Helvetica, sans-serif;
+            border: 2.5px solid black;
+            border-radius: 5px;
+        }
+
+        .go-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .go-button:active {
+            transform: translateY(0);
+        }
+  </style>
+<body>
+    <div class="overlay" id="overlay">
+        <div class="welcome-box">
+            <h2>5. Homework Time:</h2>
+            <img src="images/tomato.png" alt="tomato" width="100">
+            <p>Let's see what's on the to-do list for today.</p>
+            <button class="go-button" onclick="fadeOverlay()">GO!</button>
+        </div>
+    </div>
+
+    <script>
+        function fadeOverlay() {
+            const overlay = document.getElementById('overlay');
+            overlay.classList.add('fade-out');
+        }
+    </script>
+</body>
+</div>
+
+
