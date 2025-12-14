@@ -1,0 +1,25 @@
+.onward{
+    position: absolute;
+    bottom: -10px;
+    right: 10px;
+}
+
+.onward:hover{
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+
+.goback{
+    position: absolute;
+    bottom: -10px;
+    left: 10px;
+}
+
+.goback:hover{
+   position: absolute;
+    bottom: 20px;
+    left: 10px;
+}
+
+
